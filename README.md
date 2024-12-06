@@ -64,7 +64,7 @@ This project includes a Flask-based API for making loan approval predictions. Th
 
 The web interface allows users to input loan application details and get real-time predictions. Below is a screenshot of the front-end form:
 
-![Loan Approval Form Screenshot](images/screenshot.png)  
+![Loan Approval Form Screenshot](image/screenshot.png)  
 *Loan Application Form*  
 
 ## How to Run Locally
