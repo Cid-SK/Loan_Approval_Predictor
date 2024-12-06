@@ -26,6 +26,9 @@ def preprocess_data(input_file, output_folder_data, output_folder_model):
     label_encoders = {}
     categorical_columns = ['education', 'self_employed', 'loan_status']
     for col in categorical_columns:
+        # Clean the data by stripping whitespace from categorical columns
+        df[col] = df[col].str.strip()
+
         le = LabelEncoder()
         df[col] = le.fit_transform(df[col])
         label_encoders[col] = le

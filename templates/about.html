@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-900 text-white">
+
+    <header class="bg-opacity-30 backdrop-blur-lg top-0 z-50 py-4">
+        <div class="container mx-auto flex justify-between items-center px-4">
+            <div class="flex items-center space-x-2">
+                <h1 class="text-2xl font-extrabold tracking-tight bg-clip-text text-transparent bg-gradient-to-r from-sky-500 to-white">
+                    #HashTag
+                </h1>                
+            </div>
+            <nav class="space-x-6">
+                <a href="/" class="text-transparent font-bold bg-clip-text bg-white hover:bg-gradient-to-r hover:from-[#0b0dac] hover:to-[#f901de] transition duration-300">
+                    Home
+                </a>
+                <a href="/about" class="text-transparent font-bold bg-clip-text bg-white hover:bg-gradient-to-r hover:from-[#0b0dac] hover:to-[#f901de] transition duration-300">
+                    About
+                </a>
+                <a href="/contact" class="text-transparent font-bold bg-clip-text bg-white hover:bg-gradient-to-r hover:from-[#0b0dac] hover:to-[#f901de] transition duration-300">
+                    Contact
+                </a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container mx-auto mt-10 px-6">
+        <section class="mb-10 flex flex-col md:flex-row items-center">
+            <!-- About Us Section -->
+            <div class="w-full md:w-1/2 pr-6">
+                <h1 class="text-4xl font-bold text-[#FAFAFA] mb-4">About Us</h1>
+                <p class="text-gray-200 mb-4">
+                    Welcome to the Loan Approval Predictor! Our project is designed to streamline the loan application process by predicting the likelihood of loan approval.
+                </p>
+                <p class="text-gray-200 mb-4">
+                    Using advanced machine learning models, we provide financial institutions and applicants with accurate, data-driven insights to make well-informed decisions quickly and efficiently.
+                </p>
+            </div>
+            
+            <!-- Our Vision Section (Highlighted Div) -->
+            <div class="w-full md:w-1/2 bg-gray-800 p-6 rounded-lg shadow-lg mt-6 md:mt-0">
+                <h2 class="text-3xl font-semibold text-white mb-4">Our Vision</h2>
+                <ul class="list-disc pl-5 text-gray-300">
+                    <li>Simplify loan approval processes for financial institutions.</li>
+                    <li>Reduce waiting times and uncertainty for applicants.</li>
+                    <li>Ensure fairness and transparency in decision-making.</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="mb-10 flex flex-col items-center bg-gray-800 p-6 rounded-lg">
+            <div class="w-full">
+                <h2 class="text-3xl font-semibold text-white mb-4">How We Make Predictions</h2>
+                <p class="text-gray-300 mb-4">
+                    Loan Approval Predictor uses a structured machine learning pipeline to predict loan outcomes accurately.
+                </p>
+                <p class="text-gray-300 mb-4">
+                    The pipeline includes:
+                </p>
+                <ol class="list-decimal list-inside text-gray-200">
+                    <li><strong>Data Exploration:</strong> Analyze and understand the data.</li>
+                    <li><strong>Data Cleaning:</strong> Handle missing values and outliers.</li>
+                    <li><strong>Feature Engineering:</strong> Encode categorical features and scale numeric ones.</li>
+                    <li><strong>Model Training:</strong> Experiment with algorithms like Random Forest, Gradient Boosting, and XGBoost.</li>
+                    <li><strong>Model Evaluation:</strong> Compare accuracy, precision, recall, and F1 scores.</li>
+                </ol>
+            </div>
+        </section>
+
+        <section class="mb-10">
+            <h2 class="text-3xl font-semibold text-white mb-4">Technologies Used</h2>
+            <p class="text-gray-300 mb-4">
+                This project leverages the following technologies:
+            </p>
+            <ul class="list-disc pl-5 text-gray-300">
+                <li><strong>Python:</strong> For building and training the machine learning models.</li>
+                <li><strong>Scikit-learn, XGBoost:</strong> Libraries for implementing and optimizing the models.</li>
+                <li><strong>Flask:</strong> Framework for backend integration and deployment.</li>
+            </ul>
+        </section>
+    </main>
+
+    <footer class="shadow mt-10">
+        <div class="container mx-auto text-center py-4">
+            <p class="text-white-700">&copy; 2024 LoanSense. All rights reserved.</p>
+        </div>
+    </footer>
+
+</body>
+</html>

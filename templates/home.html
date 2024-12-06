@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-900 text-white">
+<body class="bg-gradient-to-br from-blue-500 to-indigo-900 text-white min-h-screen font-sans flex flex-col justify-between">
+
+    <!-- Navbar -->
+    <header class="bg-opacity-30 backdrop-blur-lg sticky top-0 z-50 py-4">
+        <div class="container mx-auto flex justify-between items-center px-4">
+            <div class="flex items-center space-x-2">
+                <h1 class="text-2xl font-extrabold tracking-tight bg-clip-text text-transparent bg-gradient-to-r from-sky-500 to-white">#HashTag</h1>
+            </div>
+            <nav class="space-x-6">
+                <a href="/" class="text-transparent font-bold bg-clip-text bg-gradient-to-r from-[#FAFAFA] to-[#FAFAFA] hover:bg-gradient-to-r hover:from-[#0b0dac] hover:to-[#f901de] transition duration-300">
+                    Home
+                </a>
+                <a href="/about" class="text-transparent font-bold bg-clip-text bg-gradient-to-r from-[#FAFAFA] to-[#FAFAFA] hover:bg-gradient-to-r hover:from-[#0b0dac] hover:to-[#f901de] transition duration-300">
+                    About
+                </a>
+                <a href="/contact" class="text-transparent font-bold bg-clip-text bg-gradient-to-r from-[#FAFAFA] to-[#FAFAFA] hover:bg-gradient-to-r hover:from-[#0b0dac] hover:to-[#f901de] transition duration-300">
+                    Contact
+                </a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="flex-grow flex items-center justify-center px-4 py-12">
+        <div class="bg-gradient-to-b from-sky-500 to-white p-6 shadow-xl rounded-lg w-full max-w-3xl p-8"> 
+            <h2 class="text-3xl font-extrabold mb-6 text-center text-white">Loan Approval Prediction</h2>
+            <!-- Form with Gradient Background -->
+            <form action="/predict" method="POST" class="grid grid-cols-1 md:grid-cols-2 gap-6">    
+                <!-- Individual Input Fields -->
+                <div>
+                    <label class="block text-gray-700 font-semibold">Income Annum:</label>
+                    <input type="number" step="any" min="0" name="income_annum" required class="mt-1 block w-full p-2 border border-gray-300 rounded-lg focus:border-blue-500 focus:ring-blue-500 shadow-md bg-white text-black">
+                </div>
+
+                <div>
+                    <label class="block text-gray-700 font-semibold">Loan Amount:</label>
+                    <input type="number" step="any" min="0" name="loan_amount" required class="mt-1 block w-full p-2 border border-gray-300 rounded-lg focus:border-blue-500 focus:ring-blue-500 shadow-md bg-white text-black">
+                </div>
+
+                <div>
+                    <label class="block text-gray-700 font-semibold">Loan Term:</label>
+                    <input type="number" step="any" min="1" name="loan_term" required class="mt-1 block w-full p-2 border border-gray-300 rounded-lg focus:border-blue-500 focus:ring-blue-500 shadow-md bg-white text-black">
+                </div>
+
+                <div>
+                    <label class="block text-gray-700 font-semibold">CIBIL Score:</label>
+                    <input type="number" step="any" min="300" name="cibil_score" required class="mt-1 block w-full p-2 border border-gray-300 rounded-lg focus:border-blue-500 focus:ring-blue-500 shadow-md bg-white text-black">
+                </div>
+
+                <div>
+                    <label class="block text-gray-700 font-semibold">Residential Assets Value:</label>
+                    <input type="number" step="any" min="0" name="residential_assets_value" required class="mt-1 block w-full p-2 border border-gray-300 rounded-lg focus:border-blue-500 focus:ring-blue-500 shadow-md bg-white text-black">
+                </div>
+
+                <div>
+                    <label class="block text-gray-700 font-semibold">Commercial Assets Value:</label>
+                    <input type="number" step="any" min="0" name="commercial_assets_value" required class="mt-1 block w-full p-2 border border-gray-300 rounded-lg focus:border-blue-500 focus:ring-blue-500 shadow-md bg-white text-black">
+                </div>
+
+                <div>
+                    <label class="block text-gray-700 font-semibold">Luxury Assets Value:</label>
+                    <input type="number" step="any" min="0" name="luxury_assets_value" required class="mt-1 block w-full p-2 border border-gray-300 rounded-lg focus:border-blue-500 focus:ring-blue-500 shadow-md bg-white text-black">
+                </div>
+
+                <div>
+                    <label class="block text-gray-700 font-semibold">Bank Asset Value:</label>
+                    <input type="number" step="any" min="0" name="bank_asset_value" required class="mt-1 block w-full p-2 border border-gray-300 rounded-lg focus:border-blue-500 focus:ring-blue-500 shadow-md bg-white text-black">
+                </div>
+
+                <div>
+                    <label class="block text-gray-700 font-semibold">Number of Dependents:</label>
+                    <input type="number" step="any" min="0" name="no_of_dependents" required class="mt-1 block w-full p-2 border border-gray-300 rounded-lg focus:border-blue-500 focus:ring-blue-500 shadow-md bg-white text-black">
+                </div>
+
+                <!-- Categorical Features -->
+                <div>
+                    <label class="block text-gray-700 font-semibold">Education:</label>
+                    <select name="education" required class="mt-1 block w-full p-2 border border-gray-300 rounded-lg focus:border-blue-500 focus:ring-blue-500 shadow-md bg-white text-black">
+                        <option value="Graduate">Graduate</option>
+                        <option value="Not Graduate">Not Graduate</option>
+                    </select>
+                </div>
+
+                <div>
+                    <label class="block text-gray-700 font-semibold">Self Employed:</label>
+                    <select name="self_employed" required class="mt-1 block w-full p-2 border border-gray-300 rounded-lg focus:border-blue-500 focus:ring-blue-500 shadow-md bg-white text-black">
+                        <option value="Yes">Yes</option>
+                        <option value="No">No</option>
+                    </select>
+                </div>
+
+                <!-- Submit and Reset Buttons Spanning Two Columns -->
+                <div class="md:col-span-2 flex justify-center space-x-4 mt-4">
+                    <button type="submit" class="bg-gradient-to-r from-teal-500 to-blue-600 hover:from-teal-600 hover:to-blue-700 text-white font-semibold py-2 px-6 transition rounded-lg duration-200 shadow-lg">
+                        Predict
+                    </button>
+                    <button type="reset" class="bg-gray-300 hover:bg-gray-400 text-gray-800 font-semibold py-2 px-6 rounded-lg transition duration-200 shadow-lg">
+                        Reset
+                    </button>
+                </div>
+            </form>
+        </div>
+    </main>
+
+    <!-- Modal Popup for Prediction Result -->
+    {% if predictions %}
+    <div id="predictionModal" class="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50">
+        
+        <div class="bg-white rounded-lg shadow-lg p-6 max-w-sm w-full text-center">
+            <button onclick="closeModal()" class="right-4 hover:text-black focus:outline-none text-lg">
+                &times;
+            </button>  
+            {% if predictions == 'Rejected' %}
+            <div class="flex flex-col items-center">
+                <h3 class="mt-6 text-yellow-600 font-bold text-center">Heads Up: Potential for Loan Rejection</h3>
+            </div>            
+            {% elif predictions == 'Approved' %}
+            <div class="flex flex-col items-center">
+                <h3 class="mt-6 text-green-600 font-bold text-center">Great News: High Probability of Loan Approval!</h3>
+            </div>            
+            {% endif %}
+            <button onclick="closeModal()" class="mt-4 bg-blue-600 text-white py-2 px-4 rounded-md hover:bg-blue-700">Close</button>
+        </div>
+    </div>
+    <script>
+        function closeModal() {
+            document.getElementById('predictionModal').style.display = 'none';
+        }
+    </script>
+    {% endif %}
+
+
+
+
+</body>
+
+</html>
