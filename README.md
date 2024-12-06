@@ -1,5 +1,3 @@
-Here’s a README file content for your project without the code:
-
 ---
 
 # Loan Approval Predictor
@@ -12,9 +10,10 @@ This project aims to predict whether a loan application will be approved based o
 2. [Data Preprocessing](#data-preprocessing)
 3. [Model Training](#model-training)
 4. [API for Prediction](#api-for-prediction)
-5. [How to Run](#how-to-run)
-6. [Technologies Used](#technologies-used)
-7. [License](#license)
+5. [Front-end](#front-end)
+6. [How to Run Locally](#how-to-run-locally)
+7. [Technologies Used](#technologies-used)
+8. [License](#license)
 
 ## Project Description
 
@@ -61,14 +60,21 @@ This project includes a Flask-based API for making loan approval predictions. Th
 - **`/predict`**: Accepts POST requests with the input data and returns the loan approval prediction.
 - **`/submit`**: Handles form submission and triggers the prediction process.
 
-## How to Run
+## Front-end
 
-Follow these steps to run the project:
+The web interface allows users to input loan application details and get real-time predictions. Below is a screenshot of the front-end form:
+
+![Loan Approval Form Screenshot](images/screenshot.png)  
+*Loan Application Form*  
+
+## How to Run Locally
+
+Follow these steps to run the project locally:
 
 1. **Clone the Repository**: 
    - Use `git` to clone the repository to your local machine:
      ```bash
-     git clone https://github.com/your-username/Loan_Approval_Predictor.git
+     git clone https://github.com/Cid-SK/Loan_Approval_Predictor.git
      ```
 
 2. **Install Dependencies**:
@@ -103,5 +109,3 @@ Follow these steps to run the project:
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
 ---
-
-This structure covers an end-to-end explanation of your project, without the actual code. You can add specific details or links where necessary.
