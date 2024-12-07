@@ -123,11 +123,11 @@
             </button>  
             {% if predictions == 'Rejected' %}
             <div class="flex flex-col items-center">
-                <h3 class="mt-6 text-yellow-600 font-bold text-center">Heads Up: Potential for Loan Rejection</h3>
+                <h3 class="mt-6 text-yellow-600 font-bold text-center">Unfortunately, it did not meet the necessary criteria for approval.</h3>
             </div>            
             {% elif predictions == 'Approved' %}
             <div class="flex flex-col items-center">
-                <h3 class="mt-6 text-green-600 font-bold text-center">Great News: High Probability of Loan Approval!</h3>
+                <h3 class="mt-6 text-green-600 font-bold text-center">Great news! Your loan request has been successfully approved.</h3>
             </div>            
             {% endif %}
             <button onclick="closeModal()" class="mt-4 bg-blue-600 text-white py-2 px-4 rounded-md hover:bg-blue-700">Close</button>
